@@ -1,3 +1,4 @@
+
 class Journal
 {
     private List<Entry> entries = new List<Entry>();

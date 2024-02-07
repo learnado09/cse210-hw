@@ -23,29 +23,29 @@ class Program
             Console.Clear();
             int choice = ShowMenu();
 
-            if (choice == 1) 
+            if (choice == 1) // Add journal 
             {
-                int promptIndex = rnd.Next(prompts.Length); 
-                journal.AddJournal(prompts[promptIndex]); 
+                int promptIndex = rnd.Next(prompts.Length); // Selecting a random prompt
+                journal.AddJournal(prompts[promptIndex]); // Passing the selected prompt
             }
-            else if (choice == 2) 
+            else if (choice == 2) // List journal 
             {
                 Console.Clear();
                 journal.DisplayJournal();
                 Console.WriteLine("\nPress any key to continue...");
                 Console.ReadKey();
             }
-            else if (choice == 3) 
+            else if (choice == 3) // Save journal 
             {
                 var lines = journal.Export();
                 WriteFile(lines);
             }
-            else if (choice == 4) 
+            else if (choice == 4) // Load journal 
             {
                 var lines = ReadFile();
                 journal = new Journal(lines);
             }
-            else if (choice == 5)
+            else if (choice == 5) // Exit
             {
                 keepGoing = false;
             }
@@ -59,16 +59,16 @@ class Program
 
     static int ShowMenu()
     {
-        Console.WriteLine("1. Write a new journal entry");
-        Console.WriteLine("2. Display ");
-        Console.WriteLine("3. Save ");
-        Console.WriteLine("4. Load ");
+        Console.WriteLine("1. Write a new entry");
+        Console.WriteLine("2. Display the journal");
+        Console.WriteLine("3. Save the journal");
+        Console.WriteLine("4. Load the journal");
         Console.WriteLine("5. Exit");
         Console.Write("Enter your choice: ");
         if (!int.TryParse(Console.ReadLine(), out int choice))
         {
             Console.WriteLine("Please enter a valid number.");
-            return 0; 
+            return 0; // Returning 0 to handle invalid input gracefully
         }
         return choice;
     }
