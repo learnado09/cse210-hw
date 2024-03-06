@@ -74,14 +74,14 @@ class ReflectionActivity : Activity
         Console.WriteLine("Prompt: " + prompts[promptIndex]);
         Console.WriteLine("\nTake a moment to reflect on this question. When you're ready, press any key to continue...");
         Console.ReadKey(true);
-        // Assuming a simple reflection activity without interactive components beyond initial reflection.
+         reflection activity without interactive components beyond initial reflection.
         Console.WriteLine("Reflection is a powerful tool for personal growth. Remember to take time regularly to reflect on your experiences and feelings.");
     }
 }
 
     class BreathingActivity : Activity
     {
-        public BreathingActivity() : base("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.") { }
+// public BreathingActivity() : base("Breathing", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.") { }
 
         protected override void RunActivity()
         {
