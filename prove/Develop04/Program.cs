@@ -31,7 +31,7 @@ class Program
             }
             else{
                 Console.Clear();
-                Console.WriteLine("You should be more mindful and spend more time on this program. I am dissapointed.");
+                Console.WriteLine("You should be more mindful and spend more time on this program. Thank you .");
                 Activity activity = new Activity(10, "", "", 3,3, "");
                 activity.InitialPause();
                 break;
